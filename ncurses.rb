@@ -4,7 +4,7 @@ class Ncurses < Formula
   url "https://ftpmirror.gnu.org/ncurses/ncurses-6.0.tar.gz"
   mirror "https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz"
   sha256 "f551c24b30ce8bfb6e96d9f59b42fbea30fa3a6123384172f9e7284bcf647260"
-  revision 1
+  revision 2
 
   bottle do
     revision 1
@@ -80,7 +80,7 @@ class Ncurses < Formula
 
     include.install_symlink [
       "ncursesw/curses.h", "ncursesw/form.h", "ncursesw/ncurses.h",
-      "ncursesw/term.h", "ncursesw/termcap.h"
+      "ncursesw/panel.h","ncursesw/term.h", "ncursesw/termcap.h"
     ]
   end
 
