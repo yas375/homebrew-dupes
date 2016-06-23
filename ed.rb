@@ -35,9 +35,10 @@ class Ed < Formula
   end
 
   test do
-    testfile = (testpath/"test")
-    testfile.write "Hello world"
-    pipe_output("#{bin}/ged -s #{testfile}", ",s/o//\nw\n")
-    assert_equal "Hell world", testfile.read.chomp
+    testfile = testpath/"test"
+    testfile.write "Hello world\n"
+    cmd = build.with?("default-names") ? "ed" : "ged"
+    pipe_output("#{bin}/#{cmd} -s #{testfile}", ",s/o//\nw\n", 0)
+    assert_equal "Hell world\n", testfile.read
   end
 end
