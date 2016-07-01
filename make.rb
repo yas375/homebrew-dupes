@@ -1,9 +1,9 @@
 class Make < Formula
   desc "Utility for directing compilation"
   homepage "https://www.gnu.org/software/make/"
-  url "http://ftpmirror.gnu.org/make/make-4.2.tar.bz2"
-  mirror "https://ftp.gnu.org/gnu/make/make-4.2.tar.bz2"
-  sha256 "4e5ce3b62fe5d75ff8db92b7f6df91e476d10c3aceebf1639796dc5bfece655f"
+  url "https://ftpmirror.gnu.org/make/make-4.2.1.tar.bz2"
+  mirror "https://ftp.gnu.org/gnu/make/make-4.2.1.tar.bz2"
+  sha256 "d6e262bf3601b42d2b1e4ef8310029e1dcf20083c5446b4b7aa67081fdffc589"
 
   bottle do
     sha256 "e6f872ec47d2157a7d5ae3f6854128844f8e305fb7ee54dd98c23fa7c4bc1561" => :el_capitan
