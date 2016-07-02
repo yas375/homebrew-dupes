@@ -41,6 +41,8 @@ class Ncurses < Formula
                           "--with-manpage-format=normal",
                           "--with-shared",
                           "--with-gpm=no"
+    system "make"
+    ENV.deparallelize
     system "make", "install"
     make_libncurses_symlinks
 
