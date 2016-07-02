@@ -3,7 +3,7 @@ class Screen < Formula
   homepage "https://www.gnu.org/software/screen"
 
   stable do
-    url "http://ftpmirror.gnu.org/screen/screen-4.3.1.tar.gz"
+    url "https://ftpmirror.gnu.org/screen/screen-4.3.1.tar.gz"
     mirror "https://ftp.gnu.org/gnu/screen/screen-4.3.1.tar.gz"
     sha256 "fa4049f8aee283de62e283d427f2cfd35d6c369b40f7f45f947dbfd915699d63"
 
