@@ -40,7 +40,7 @@ class Zlib < Formula
     system ENV.cc, "zpipe.c", "-I#{include}", "-L#{lib}", "-lz", "-o", "zpipe"
 
     touch "foo.txt"
-    output = ("./zpipe < foo.txt > foo.txt.z")
+    output = "./zpipe < foo.txt > foo.txt.z"
     system output
     assert File.exist?("foo.txt.z")
   end

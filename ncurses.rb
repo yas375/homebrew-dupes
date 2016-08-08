@@ -78,7 +78,8 @@ class Ncurses < Formula
 
     include.install_symlink [
       "ncursesw/curses.h", "ncursesw/form.h", "ncursesw/ncurses.h",
-      "ncursesw/term.h", "ncursesw/termcap.h"]
+      "ncursesw/term.h", "ncursesw/termcap.h"
+    ]
   end
 
   test do

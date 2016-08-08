@@ -16,15 +16,15 @@ class Rsync < Formula
   depends_on "autoconf" => :build
 
   if OS.mac?
-      patch do
-        url "https://download.samba.org/pub/rsync/src/rsync-patches-3.1.2.tar.gz"
-        mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-patches-3.1.2.tar.gz"
-        mirror "https://launchpad.net/rsync/main/3.1.2/+download/rsync-patches-3.1.2.tar.gz"
-        sha256 "edeebe9f2532ae291ce43fb86c9d7aaf80ba4edfdad25dce6d42dc33286b2326"
-        apply "patches/fileflags.diff",
-              "patches/crtimes.diff",
-              "patches/hfs-compression.diff"
-      end
+    patch do
+      url "https://download.samba.org/pub/rsync/src/rsync-patches-3.1.2.tar.gz"
+      mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-patches-3.1.2.tar.gz"
+      mirror "https://launchpad.net/rsync/main/3.1.2/+download/rsync-patches-3.1.2.tar.gz"
+      sha256 "edeebe9f2532ae291ce43fb86c9d7aaf80ba4edfdad25dce6d42dc33286b2326"
+      apply "patches/fileflags.diff",
+            "patches/crtimes.diff",
+            "patches/hfs-compression.diff"
+    end
   end
 
   def install
