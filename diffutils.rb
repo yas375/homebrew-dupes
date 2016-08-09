@@ -1,9 +1,9 @@
 class Diffutils < Formula
   desc "File comparison utilities"
   homepage "https://www.gnu.org/s/diffutils/"
-  url "https://ftpmirror.gnu.org/diffutils/diffutils-3.3.tar.xz"
-  mirror "https://ftp.gnu.org/gnu/diffutils/diffutils-3.3.tar.xz"
-  sha256 "a25e89a8ab65fded1731e4186be1bb25cda967834b6df973599cdcd5abdfc19c"
+  url "https://ftpmirror.gnu.org/diffutils/diffutils-3.4.tar.xz"
+  mirror "https://ftp.gnu.org/gnu/diffutils/diffutils-3.4.tar.xz"
+  sha256 "db53c025f2ac3d217bcf753dad6dee7b410b33d0948495ff015aaf8b91189ce2"
 
   bottle do
     cellar :any_skip_relocation
@@ -20,6 +20,6 @@ class Diffutils < Formula
   test do
     (testpath/"a").write "foo"
     (testpath/"b").write "foo"
-    system "#{bin}/diff", "a", "b"
+    system bin/"diff", "a", "b"
   end
 end
