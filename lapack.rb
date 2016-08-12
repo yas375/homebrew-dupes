@@ -1,8 +1,9 @@
 class Lapack < Formula
   desc "Linear Algebra PACKage"
   homepage "http://www.netlib.org/lapack/"
-  url "http://www.netlib.org/lapack/lapack-3.6.0.tgz"
-  sha256 "a9a0082c918fe14e377bbd570057616768dca76cbdc713457d8199aaa233ffc3"
+  url "http://www.netlib.org/lapack/lapack-3.6.1.tgz"
+  sha256 "888a50d787a9d828074db581c80b2d22bdb91435a673b1bf6cd6eb51aa50d1de"
+  head "https://github.com/Reference-LAPACK/lapack.git"
 
   bottle do
     revision 1
@@ -14,10 +15,11 @@ class Lapack < Formula
   keg_only :provided_by_osx
 
   option "with-doxygen", "Build man pages with Doxygen"
-  depends_on "doxygen" => :optional
 
-  depends_on :fortran
   depends_on "cmake" => :build
+  depends_on :fortran
+  depends_on "gcc"
+  depends_on "doxygen" => [:build, :optional, "with-llvm"]
 
   def install
     if build.with? "doxygen"
@@ -25,12 +27,15 @@ class Lapack < Formula
       system "make", "man"
       man3.install Dir["DOCS/man/man3/*"]
     end
-    system "cmake", ".", "-DBUILD_SHARED_LIBS:BOOL=ON", "-DLAPACKE:BOOL=ON", *std_cmake_args
-    system "make", "install"
+    mkdir "build" do
+      system "cmake", "..", "-DBUILD_SHARED_LIBS:BOOL=ON", "-DLAPACKE:BOOL=ON",
+             *std_cmake_args
+      system "make", "install"
+    end
   end
 
   test do
-    (testpath/"test.cpp").write <<-EOS.undent
+    (testpath/"lp.cpp").write <<-EOS.undent
       #include "lapacke.h"
       int main() {
         void *p = LAPACKE_malloc(sizeof(char)*100);
@@ -40,7 +45,7 @@ class Lapack < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "test.cpp", "-L#{lib}", "-I#{include}", "-llapacke", "-o", "test"
-    system "./test"
+    system ENV.cc, "lp.cpp", "-I#{include}", "-L#{lib}", "-llapacke", "-o", "lp"
+    system "./lp"
   end
 end
