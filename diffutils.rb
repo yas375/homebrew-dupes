@@ -7,9 +7,9 @@ class Diffutils < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d7e91145143946fb73d0e5be09d2f08915bd7f1164e34b985fd935fe166e69c9" => :el_capitan
-    sha256 "08eed20300717842d35896a3a552b1cbbd3822d2bfdf5e6ca6ca05d526d4782a" => :yosemite
-    sha256 "528fbc3f85e46916d7bc5ce2e3a5e2bebaf18fcccc9bd035798c7fdea441f0e0" => :mavericks
+    sha256 "2af9d67fe5a44685015724fe373503abc38e63646104c05cc6833fd89d5b2ddf" => :el_capitan
+    sha256 "d58ffc234a2bc8664313d1d85dd5e30253e9a6dbbd22617ac0a028e777995d63" => :yosemite
+    sha256 "1c0778fa87cd4905dd7e0f418c7f98e183f7dd558e90115ea5d1d505de10c7a2" => :mavericks
   end
 
   def install
