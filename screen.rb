@@ -16,9 +16,9 @@ class Screen < Formula
   end
 
   bottle do
-    sha256 "2589ee93c83a8ecdb6823b31ed94a14e1eba0932cf73d33a9c1941cf25919fc9" => :el_capitan
-    sha256 "4a46700acd2fa5c174f21bf2631122815b122727b22e04927d70049f14a77bcc" => :yosemite
-    sha256 "4c91084adb0ec83e263f0038b812742c293c1b910d4c9ea4e9b8cb6fdce3d66c" => :mavericks
+    sha256 "791f7efb94556fee2535bad543dd3ded0afc85b083fed0ce354c9cf859479cee" => :el_capitan
+    sha256 "34713de232c8da57b7af9c38eda55cc9f649dc7713ad3c92a58a7ea23b964af1" => :yosemite
+    sha256 "456f6a6a6743c4e0dc1af4793fbe4e8908ba966510f2edeaecf0e46023a5c7e5" => :mavericks
   end
 
   head do
