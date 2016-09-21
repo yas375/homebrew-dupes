@@ -1,7 +1,7 @@
 class Xar < Formula
   desc "eXtensible ARchiver"
-  homepage "https://code.google.com/p/xar/"
-  url "https://xar.googlecode.com/files/xar-1.5.2.tar.gz"
+  homepage "https://code.google.com/archive/p/xar/"
+  url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/xar/xar-1.5.2.tar.gz"
   sha256 "4c5d5682803cdfab16d72365cf51fc4075d597c5eeaa8c7d1990fea98cdae3e6"
 
   bottle do
@@ -16,7 +16,7 @@ class Xar < Formula
   depends_on "openssl"
 
   # Known issue upstream:
-  # https://code.google.com/p/xar/issues/detail?id=51
+  # https://code.google.com/archive/p/xar/issues/51
   patch :DATA
 
   def install
