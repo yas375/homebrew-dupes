@@ -6,7 +6,7 @@ class Awk < Formula
   sha256 "8dc092165c5a4e1449f964286483d06d0dbfba4b0bd003cb5dab30de8f6d9b83"
 
   conflicts_with "gawk",
-    :because => "both install awk executables."
+    because: "both install awk executables."
 
   def install
     ENV.O3 # Docs recommend higher optimization
