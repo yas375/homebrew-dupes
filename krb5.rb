@@ -5,9 +5,9 @@ class Krb5 < Formula
   sha256 "03a61a4280c9161771fb39019085dbe6a57aa602080515ff93b43cd6137e0b95"
 
   bottle do
-    sha256 "d6c9632dcc50fbe987e43a6b4dca02422aadf448d7fbd53ebf75f419c3c118f4" => :el_capitan
-    sha256 "a5616ee867f2cebf1108109e418b1668355c150b60942b6551e785c27680f3ed" => :yosemite
-    sha256 "7e8182d2f02d34a517fb2601c9d9307539e8d6910f24cacd3ad17a5de711e53e" => :mavericks
+    sha256 "7d96e5c66f9b33d816ad2ef7f593c553f787c389a48d99bb7790354549b70b6b" => :sierra
+    sha256 "86864f7c528286ef53f173032ca87b0911c71f1b3a04d0fd482faa2985dde301" => :el_capitan
+    sha256 "1ca8042ea545878c3cc2bd10354b921bbd50c23eb538888e0603134c20eaf7bb" => :yosemite
   end
 
   keg_only :provided_by_osx
