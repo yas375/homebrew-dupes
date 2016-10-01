@@ -21,7 +21,7 @@ class TclTk < Formula
   option "without-tk", "Don't build the Tk (window toolkit)"
   option "with-x11", "Build X11-based Tk instead of Aqua-based Tk"
 
-  depends_on x11: :optional
+  depends_on :x11 => :optional
 
   resource "tk" do
     url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.6/tk8.6.6-src.tar.gz"

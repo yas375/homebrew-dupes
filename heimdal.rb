@@ -7,7 +7,7 @@ class Heimdal < Formula
 
   keg_only :provided_by_osx
 
-  depends_on x11: :recommended
+  depends_on :x11 => :recommended
 
   def install
     args = %W[
